@@ -1,18 +1,17 @@
 # Problem Solving – Cutting Release-Blocking Defects at Barco
 
 ## Situation
-In 2022, my ClickShare scrum team at Barco faced a surge in release-blocking bugs coming from both in-house development and an ODM partner. Each release was slipping by one to two sprints, we were burning engineer time in late-cycle triage, and leadership was considering feature freezes to protect schedules.
+In 2022, our ClickShare ODM partner was shipping firmware drops with a spike in release-blocking defects. Their builds routinely failed our acceptance tests, leadership was questioning the supplier relationship, and we had to reject multiple releases to protect production devices.
 
 ## Task
-As the embedded software team lead, I needed to restore delivery predictability without halting roadmap commitments. That meant identifying the systemic causes behind the defects, aligning internal and external teams on a fix plan, and delivering measurable quality improvements before the next quarterly release gate.
+As the embedded software lead for Barco, I needed to get the external ODM back to SLA compliance. That meant aligning their engineering leadership on root causes, setting clear expectations for defect turnaround, and restoring confidence in their release readiness.
 
 ## Action
-- Set up a joint Barco/ODM defect review cadence, introduced 5-Why root-cause templates, and required every bug to land with an owner, containment plan, and time-bound corrective action.
-- Rebuilt our quality dashboards in Jenkins/Grafana so we could trace defects back to the originating component and sprint, giving product and QA real-time visibility during portfolio reviews.
-- Paired engineers across sites on the thorniest driver and middleware issues, ran focused debug sessions with Qualcomm, and captured the learnings into playbooks that fed onboarding and code reviews.
-- Formalized entry/exit criteria for each sprint, including automated smoke-test gates and a “no new critical bug” rule before backlog grooming closed.
+- Introduced a 5-Why root-cause template that the ODM had to complete for every SLA breach, and ran the first few sessions myself to set the bar for rigor.
+- Tightened the SLA language to include turnaround time on fixes, mandatory regression evidence, and escalation paths when the same root cause resurfaced.
+- Rejected non-compliant releases, walked their QA and release managers through our expectations, and built a diagnostic checklist they could follow before shipping the next build.
 
 ## Result
-Within one quarter we cut release-blocking defects by roughly 71%, recovered two lost sprints, and avoided the feature freeze. The stronger quality discipline improved trust with leadership, which allowed us to keep roadmap scope intact while still shipping a factory-qualified release.
+After coaching the ODM through the new review process and turning away unqualified drops, they cut release-blocking defects by roughly 71%. Their release quality stabilized, we stopped burning time on emergency triage, and the supplier relationship moved back into good standing.
 
 **Interview Takeaway:** I combine structured root-cause analysis with cross-team alignment so the fixes stick, the data stays visible, and the team keeps shipping at pace.
